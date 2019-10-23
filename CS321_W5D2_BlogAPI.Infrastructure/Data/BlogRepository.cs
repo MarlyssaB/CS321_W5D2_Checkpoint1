@@ -57,8 +57,13 @@ namespace CS321_W5D2_BlogAPI.Infrastructure.Data
         public void Remove(int id)
         {
             // TODO: remove blog
-            _dbContext.Blogs.Remove(id);
-            _dbContext.SaveChanges();
+            var currentBlog = this.Get(id);
+            if (currentBlog != null)
+            {
+                _dbContext.Blogs.Remove(currentBlog);
+                _dbContext.SaveChanges();
+            }
+                   
         }
     }
 }
