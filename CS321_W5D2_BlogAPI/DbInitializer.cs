@@ -148,8 +148,8 @@ Ipsum arcu tempus turpis nam amet aenean in cras cursus dictum nullam enim. Ridi
             {
                 _userManager.AddToRoleAsync(user, "Admin").Wait();
             }
-            //// create an Admin user, if it doesn't already exist
-            //if (_userManager.FindByNameAsync("admin").Result == null)
+            //create an Admin user, if it doesn't already exist
+           // if (_userManager.FindByNameAsync("admin").Result == null)
             //{
             //    AppUser user = new AppUser
             //    {
